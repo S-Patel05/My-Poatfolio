@@ -5,7 +5,13 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+server: {
+    host: true,
+    port: 5173,
+  },
   preview: {
-    allowedHosts: ['https://my-poatfolio.onrender.com']
+    allowedHosts: true, // This tells Vite to stop blocking Render's URL
+    host: true,
+    port: 4173
   }
 })
